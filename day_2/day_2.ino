@@ -1,15 +1,20 @@
-int LED = 12;
-int Switch1 = 2; 
-
+// Code written by Inventr.io for the 30 Day Adventure Kit
+// Learn more at https://inventr.io/adventure
+ 
+ 
+int Light = 12; // The HERO Board Pin that the LED is wired to
+ 
+// the setup function runs once when you press reset or power the board
 void setup() {
-  pinMode(LED, OUTPUT);
-  pinMode(Switch1, INPUT);
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(Light, OUTPUT);
+  digitalWrite(Light, HIGH);
 }
  
+// the loop function runs over and over again forever
 void loop() {
-  if (digitalRead(Switch1) == HIGH) {
-    digitalWrite(LED, HIGH);
-  } else {
-    digitalWrite(LED, LOW);
-  }
+  digitalWrite(Light, LOW);
+  delay(1000);
+  digitalWrite(Light, HIGH);
+  delay(500); 
 }
